@@ -1,0 +1,49 @@
+<mat-list class="menu">
+  <mat-list-item>
+    Início
+    <button mat-button></button>
+  </mat-list-item>
+  <mat-list-item>
+    Componentes
+    <button mat-button mat-icon-button (click)="showSubmenu = !showSubmenu">
+      <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}">expand_more</mat-icon>
+    </button>
+  </mat-list-item>
+  <div class="submenu" [ngClass]="{'expanded' : showSubmenu}">
+    <mat-list-item>
+      Botões
+      <button mat-button mat-icon-button (click)="showBotoes = !showBotoes">
+        <mat-icon class="menu-button" [ngClass]="{'rotated' : showBotoes}">expand_more</mat-icon>
+      </button>
+    </mat-list-item>
+    <div class="botoes" [ngClass]="{'expanded' : showBotoes}">
+      <mat-list-item>
+        Botão 1
+        <button mat-button></button>
+      </mat-list-item>
+      <mat-list-item>
+        Botão 2
+        <button mat-button></button>
+      </mat-list-item>
+    </div>
+    <mat-list-item>
+      Tabelas
+      <button mat-button></button>
+    </mat-list-item>
+    <mat-list-item>
+      Menus
+      <button mat-button></button>
+    </mat-list-item>
+    <mat-list-item>
+      Bibliotecas
+      <button mat-button></button>
+    </mat-list-item>
+  </div>
+  <mat-list-item>
+    FAQ
+    <button mat-button></button>
+  </mat-list-item>
+  <mat-list-item>
+    Licença
+  </mat-list-item>
+</mat-list>

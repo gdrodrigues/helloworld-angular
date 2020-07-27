@@ -1,0 +1,33 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>
+      <a href="index.html">
+      <span id="nome">ANBIMA</span>
+      </a>
+    </mat-toolbar>
+    <mat-nav-list>
+      <!-- Menu da página -->
+      <app-menu-list></app-menu-list>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="body">
+    <mat-toolbar color="primary" class="teste">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <nav>
+        <img [src]="srcLogo" onError="this.src= 'assets/ANBIMA.png'" >
+      </nav>
+    </mat-toolbar>
+      <!-- conteudo do corpo -->
+      <corpo-index></corpo-index>
+  </mat-sidenav-content>
+</mat-sidenav-container>
