@@ -16,10 +16,10 @@
   height: 0;
 }
 .submenu.expanded {
-  height: 144px;
+  height: auto;
 }
 .botoes.expanded {
-  height: 144px;
+  height: auto;
 }
 
 .menu mat-list-item{
