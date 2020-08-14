@@ -15,19 +15,23 @@
   </mat-sidenav>
   <mat-sidenav-content class="body">
     <mat-toolbar color="primary" class="teste">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
       <nav>
         <img [src]="srcLogo" onError="this.src= 'assets/ANBIMA.png'" >
       </nav>
     </mat-toolbar>
       <!-- conteudo do corpo -->
-      <corpo-index></corpo-index>
+    <nav class="navegacao" *ngIf="items?.length > 0">
+      <ng-container *ngFor="let item of items">
+        <ng-container *ngIf="item.visible">
+          <div *ngIf = "item.active" [attr.class]="'item itemNavegacaoAtivo'">{{item.name}}</div>
+          <div *ngIf = "!item.active" [attr.class]="'item itemNavegacao'">{{item.name}}</div>
+          <div *ngIf="item.filhos?.length > 0">
+            <div *ngFor="let filhos of item.filhos">
+              {{filhos}}
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </nav>
   </mat-sidenav-content>
 </mat-sidenav-container>
