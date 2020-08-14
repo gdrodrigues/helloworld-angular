@@ -25,9 +25,12 @@
         <ng-container *ngIf="item.visible">
           <div *ngIf = "item.active" [attr.class]="'item itemNavegacaoAtivo'">{{item.name}}</div>
           <div *ngIf = "!item.active" [attr.class]="'item itemNavegacao'">{{item.name}}</div>
-          <div *ngIf="item.filhos?.length > 0">
-            <div *ngFor="let filhos of item.filhos">
-              {{filhos}}
+          <div *ngIf="item.filhos!=null">
+            <div *ngFor="let filho of item.filhos">
+              <div *ngIf="filho.visible">
+                <div *ngIf = "filho.active" [attr.class]="'item itemNavegacaoAtivo'">{{filho.name}}</div>
+                <div *ngIf = "!filho.active" [attr.class]="'item itemNavegacao'">{{filho.name}}</div>
+              </div>
             </div>
           </div>
         </ng-container>

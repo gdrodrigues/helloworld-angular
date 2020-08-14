@@ -1,20 +1,15 @@
-import {ItemSubmenu} from "./item-submenu";
-
-export class ItemMenu {
+export class ItemSubmenu {
 
   visible: boolean;
   active = false;
   name: string;
   state: object;
-  filhos: Array<ItemSubmenu>;
 
-  constructor(name: string, active: boolean, visible: boolean, filhos: Array<ItemSubmenu>) {
+  constructor(name: string, active: boolean, visible: boolean) {
     this.name = name;
     this.active = active;
     this.visible = visible;
-    this.filhos = filhos;
   }
-
   public hide() {
     this.visible = false;
     this.active = false;
