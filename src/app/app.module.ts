@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {MeuPrimeiroComponent} from './meu-primeiro/meu-primeiro.component';
 import { CorpoIndex } from './corpo-index/corpo-index';
-import {CursosModule} from './cursos/cursos.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -21,7 +19,6 @@ import { Teste2Component } from './teste2/teste2/teste2.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MeuPrimeiroComponent,
     CorpoIndex,
     MainNavComponent,
     MenuListComponent,
@@ -30,7 +27,6 @@ import { Teste2Component } from './teste2/teste2/teste2.component';
   ],
   imports: [
     BrowserModule,
-    CursosModule,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
