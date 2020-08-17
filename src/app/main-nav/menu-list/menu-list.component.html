@@ -3,8 +3,8 @@
     <div *ngFor="let items of items">
       <div *ngIf="items.visible">
         <mat-list-item >
-            <div *ngIf="items.active" [attr.class]="'item itemNavegacaoAtivo'"> {{items.name}}</div>
-            <div *ngIf = "!items.active" [attr.class]="'item itemNavegacao'"> {{items.name}}
+            <div *ngIf="items.active" [attr.class]="'item itemNavegacaoAtivo'" [routerLink]="items.path"> {{items.name}}</div>
+            <div *ngIf = "!items.active" [attr.class]="'item itemNavegacao'" [routerLink]="items.path"> {{items.name}}
             <button mat-raised-button color="primary"></button>
             </div>
         </mat-list-item>

@@ -5,7 +5,7 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>
       <a href="index.html">
-      <span id="nome">ANBIMA</span>
+      <span id="nome">Componentes</span>
       </a>
     </mat-toolbar>
     <mat-nav-list>
@@ -20,21 +20,6 @@
       </nav>
     </mat-toolbar>
       <!-- conteudo do corpo -->
-    <nav class="navegacao" *ngIf="items?.length > 0">
-      <ng-container *ngFor="let item of items">
-        <ng-container *ngIf="item.visible">
-          <div *ngIf = "item.active" [attr.class]="'item itemNavegacaoAtivo'">{{item.name}}</div>
-          <div *ngIf = "!item.active" [attr.class]="'item itemNavegacao'">{{item.name}}</div>
-          <div *ngIf="item.filhos!=null">
-            <div *ngFor="let filho of item.filhos">
-              <div *ngIf="filho.visible">
-                <div *ngIf = "filho.active" [attr.class]="'item itemNavegacaoAtivo'">{{filho.name}}</div>
-                <div *ngIf = "!filho.active" [attr.class]="'item itemNavegacao'">{{filho.name}}</div>
-              </div>
-            </div>
-          </div>
-        </ng-container>
-      </ng-container>
-    </nav>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

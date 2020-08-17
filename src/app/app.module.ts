@@ -13,6 +13,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MenuListComponent } from './main-nav/menu-list/menu-list.component';
+import {MatCardModule} from "@angular/material/card";
+import {AppRoutingModule} from "./app-routing.module";
+import { TesteComponent } from './teste/teste/teste.component';
+import { Teste2Component } from './teste2/teste2/teste2.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,8 @@ import { MenuListComponent } from './main-nav/menu-list/menu-list.component';
     CorpoIndex,
     MainNavComponent,
     MenuListComponent,
+    TesteComponent,
+    Teste2Component,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,9 @@ import { MenuListComponent } from './main-nav/menu-list/menu-list.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
