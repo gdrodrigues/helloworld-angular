@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ItemMenu} from "../item-menu";
 
 @Component({
   selector: 'app-menu-list',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuListComponent implements OnInit {
   showSubmenu = false;
-  showBotoes = false;
+
+  @Input()
+  items: Array<ItemMenu>;
+
   constructor() {}
 
   ngOnInit(): void {
   }
+
+
 
 }

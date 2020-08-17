@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
     this.addItensSubMenu();
   }
   addItensMenu() {
-    this.itensMenu.push(new ItemMenu("Início", false,  true, null))
+    this.itensMenu.push(new ItemMenu("Componentes", false,  true, null))
     this.itensMenu.push(new ItemMenu("Pagina Filtro Resultado Paginado", false, true, this.itensPaginaFiltroResultadoPaginado));
     this.itensMenu.push(new ItemMenu("Dialog", false, true, this.itensDialog));
     this.itensMenu.push(new ItemMenu("File Upload", false, true, null));
