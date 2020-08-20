@@ -1,0 +1,17 @@
+.card {
+  max-width: 1000px;
+  padding-bottom: 50px;
+  border-style: solid;
+  border-color: #0c9abe;
+  border-radius: 15px 50px;
+  position: relative;
+  left: 50px;
+}
+
+.card .conteudo {
+  align-items: center;
+}
+
+.espaco{
+  padding-bottom: 50px;
+}

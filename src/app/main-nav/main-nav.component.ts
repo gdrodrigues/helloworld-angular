@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 // @ts-ignore
 import {ItemMenu} from "./item-menu";
+import {Componente} from "../componente";
 
 @Component({
   selector: 'app-main-nav',
@@ -14,6 +15,9 @@ export class MainNavComponent {
 
   @Input()
   items: Array<ItemMenu>;
+
+  @Input()
+  componentes: Array<Componente>
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

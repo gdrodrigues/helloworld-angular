@@ -4,7 +4,7 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>
-      <a href="index.html">
+      <a href="app/home/home.component.html">
       <span id="nome">Componentes</span>
       </a>
     </mat-toolbar>
@@ -16,10 +16,12 @@
   <mat-sidenav-content class="body">
     <mat-toolbar color="primary" class="teste">
       <nav>
-        <img [src]="srcLogo" onError="this.src= 'assets/ANBIMA.png'" >
+
       </nav>
     </mat-toolbar>
       <!-- conteudo do corpo -->
-    <router-outlet></router-outlet>
+    <router-outlet>
+      <app-home [componentes]="componentes"></app-home>
+    </router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

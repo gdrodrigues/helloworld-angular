@@ -1,0 +1,13 @@
+<div *ngIf="componentes.length > 0">
+  <div *ngFor="let comp of componentes">
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title>{{comp.name}}</mat-card-title>
+      </mat-card-header>
+      <p class="conteudo">
+        <mat-card-content> {{comp.conteudo}} </mat-card-content>
+      </p>
+    </mat-card>
+    <p class="espaco"></p>
+  </div>
+</div>

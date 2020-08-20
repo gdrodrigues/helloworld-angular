@@ -15,6 +15,7 @@ import {MatCardModule} from "@angular/material/card";
 import {AppRoutingModule} from "./app-routing.module";
 import { TesteComponent } from './teste/teste/teste.component';
 import { Teste2Component } from './teste2/teste2/teste2.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { Teste2Component } from './teste2/teste2/teste2.component';
     MenuListComponent,
     TesteComponent,
     Teste2Component,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
