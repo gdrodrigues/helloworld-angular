@@ -2,7 +2,9 @@
   <div *ngFor="let comp of componentes">
     <mat-card class="card">
       <mat-card-header>
-        <mat-card-title>{{comp.name}}</mat-card-title>
+        <mat-card-title class="title">{{comp.name}}</mat-card-title>
+          <button mat-button id="buttonDow">Download</button>
+          <button mat-button id="buttonExp">Exemplo</button>
       </mat-card-header>
       <p class="conteudo">
         <mat-card-content> {{comp.conteudo}} </mat-card-content>
