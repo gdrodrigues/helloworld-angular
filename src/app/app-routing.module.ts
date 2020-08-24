@@ -5,6 +5,7 @@ import {Teste2Component} from "./teste2/teste2/teste2.component";
 import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'teste', component: TesteComponent },
   { path: 'teste2', component: Teste2Component },
   { path: 'home', component: HomeComponent}
