@@ -7,8 +7,15 @@
           <button mat-button id="buttonExp">Exemplo</button>
       </mat-card-header>
       <p class="conteudo">
-        <mat-card-content> {{comp.conteudo}} </mat-card-content>
+        <mat-card-content id="content">
+          {{comp.conteudo}}
+        </mat-card-content>
       </p>
+      <hr>
+      <mat-card-actions class="footer">
+        <span>Angular Cli 7.2.0 | </span>
+        <span>{{comp.name}} 3.2.1</span>
+      </mat-card-actions>
     </mat-card>
     <p class="espaco"></p>
   </div>

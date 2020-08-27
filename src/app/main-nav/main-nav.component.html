@@ -3,8 +3,12 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
+    <p></p>
+    <div class="logo">
+      <img src="assets/logo_showcase.png">
+    </div>
     <mat-toolbar>
-      <a href="#!/home/home.component.html">
+      <a href="#!/home/home.component.html" class="title">
       <span id="nome">Componentes</span>
       </a>
     </mat-toolbar>

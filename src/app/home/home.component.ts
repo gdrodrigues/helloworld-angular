@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   addComponentes(){
     this.componentes.push(new Componente("Pagina Filtro Resultado Paginado", "Componente que encapsula toda a área de resultado de uma tela de filtro do Selic. O componente possui paginação para os resultados",null,null));
-    this.componentes.push(new Componente("Dialog", "Componente \"Diálogo\" com função alert e modal. Estão disponíveis em diferentes tamanhos.",null,'./app/teste/teste.component.html'));
+    this.componentes.push(new Componente("Dialog", "Componente \"Diálogo\" com função alert e modal. Estão disponíveis em diferentes tamanhos.",null,'dialog'));
     this.componentes.push(new Componente("File Upload", "Componente para upload de arquivos",null,'./app/teste/teste.component.html'));
     this.componentes.push(new Componente("Button", "Botões para utilização em formulário, tabela e para inclusão de itens em tabela. Disponíveis em versões \"habilitado\" e \"desabilitado\" ",null,null));
     this.componentes.push(new Componente("Loader - Tela Cheia", "Componente de loader para a tela cheia", null, null));
