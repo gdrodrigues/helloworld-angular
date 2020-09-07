@@ -22,13 +22,12 @@ export class AppComponent implements OnInit{
     //this.addComponentes();
   }
   addItensMenu() {
-    this.itensMenu.push(new ItemMenu("Pagina Filtro Resultado Paginado", false, true, this.itensPaginaFiltroResultadoPaginado));
+    this.itensMenu.push(new ItemMenu("Filtro Resultado", false, true, this.itensPaginaFiltroResultadoPaginado));
     this.itensMenu.push(new ItemMenu("Dialog", false, true, this.itensDialog));
     this.itensMenu.push(new ItemMenu("File Upload", false, true, null));
     this.itensMenu.push(new ItemMenu("Button", false, true, null, 'teste'));
     this.itensMenu.push(new ItemMenu("Loader", false, true, null));
     this.itensMenu.push(new ItemMenu("Table", false, true, this.itensTable, 'teste2'));
-    this.itensMenu.push(new ItemMenu("FAQ", false,true, null));
   }
 
   addItensSubMenu(){

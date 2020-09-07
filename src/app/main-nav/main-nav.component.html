@@ -7,18 +7,17 @@
     <div class="logo">
       <img src="assets/logo_showcase.png">
     </div>
-    <mat-toolbar>
-      <a href="#!/home/home.component.html" class="title">
-      <span id="nome">Componentes</span>
-      </a>
-    </mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list class="menu-list">
       <!-- Menu da página -->
+      <br><br>
+      <a [routerLink]="'teste'" class="inicial">
+        <span id="nome">Página Inicial</span>
+      </a>
       <app-menu-list [items]="items"></app-menu-list>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="body">
-    <mat-toolbar color="primary" class="teste">
+    <mat-toolbar class="teste">
       <nav>
       </nav>
     </mat-toolbar>

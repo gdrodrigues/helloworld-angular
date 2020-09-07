@@ -1,3 +1,37 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<mat-list class="menu">
+  <mat-list-item>
+    Componentes
+    <button mat-button mat-icon-button (click)="showSubmenu = !showSubmenu">
+      <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}">expand_more</mat-icon>
+    </button>
+  </mat-list-item>
+  <div class="submenu" [ngClass]="{'expanded' : showSubmenu}">
+    <!-- SUBMENU -->
+    <div *ngIf="items?.length > 0">
+      <div *ngFor="let items of items">
+        <div *ngIf="items.visible">
+          <mat-list-item >
+            <div *ngIf="items.active" [attr.class]="'item itemNavegacaoAtivo'" [routerLink]="items.path"> {{items.name}}</div>
+            <div *ngIf = "!items.active" [attr.class]="'item itemNavegacao'" [routerLink]="items.path"> {{items.name}}
+              <button mat-button color="primary"></button>
+            </div>
+          </mat-list-item>
+        </div>
+      </div>
+    </div>
+  </div>
+  <mat-list-item [routerLink]="'teste2'">
+    FAQ
+    <button mat-button></button>
+  </mat-list-item>
+  <mat-list-item>
+    Licença
+  </mat-list-item>
+</mat-list>
+
+
+<!--
 <mat-list class="menu">
   <div *ngIf="items?.length > 0">
     <div *ngFor="let items of items">
@@ -12,3 +46,4 @@
     </div>
   </div>
 </mat-list>
+-->

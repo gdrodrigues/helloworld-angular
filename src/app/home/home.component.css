@@ -1,16 +1,12 @@
 .card {
-  margin-top: 30px;
-  max-width: 1000px;
+
   padding-bottom: 80px;
-  border-style: solid;
-  border-color: #888888;
-  border-radius: 15px;
-  position: relative;
-  left: 50px;
+  border: #009AD9 solid 2px;
 }
 .card .title{
   position:absolute;
   left: 10px;
+  font-family: Arial;
 }
 
 .card .conteudo #content {
@@ -30,20 +26,24 @@
   bottom: 7.5px;
   position:absolute;
   top: 10px;
-  left:930px;
+  left:90%;
   margin:0px;
-  padding:0px;
-  height:30px;
+  padding: 3px 6px;
+  height: 30px;
+  background-color: #ececec;
+  line-height: 3px;
 }
 
 .card #buttonExp {
   bottom: 7.5px;
   position:absolute;
   top: 10px;
-  left:830px;
+  left:80%;
   margin:0px;
-  padding:0px;
-  height:30px;
+  padding: 3px 6px;
+  height: 30px;
+  background-color: #ececec;
+  line-height: 3px;
 }
 
 .footer {
@@ -55,8 +55,9 @@
 }
 
 hr{
-  border-top: 1px solid #888888;
-  width: 1000px;
+  border-top: 1px solid;
+  width: 100%;
   position: relative;
   top: 110px;
+  border-color: #dbc27d;
 }
