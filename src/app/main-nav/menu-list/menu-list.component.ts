@@ -12,6 +12,10 @@ export class MenuListComponent implements OnInit {
   @Input()
   items: Array<ItemMenu>;
 
+  toggleDisplayDiv() {
+    this.showSubmenu = !this.showSubmenu;
+  }
+
   constructor() {}
 
   ngOnInit(): void {

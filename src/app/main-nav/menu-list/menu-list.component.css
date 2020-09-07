@@ -17,6 +17,7 @@
 }
 .submenu.expanded {
   height: auto;
+  padding-left: 5px;
 }
 .botoes.expanded {
   height: auto;

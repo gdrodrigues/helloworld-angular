@@ -22,7 +22,7 @@ export class AppComponent implements OnInit{
     //this.addComponentes();
   }
   addItensMenu() {
-    this.itensMenu.push(new ItemMenu("Filtro Resultado", false, true, this.itensPaginaFiltroResultadoPaginado));
+    this.itensMenu.push(new ItemMenu("Filter Result", false, true, this.itensPaginaFiltroResultadoPaginado));
     this.itensMenu.push(new ItemMenu("Dialog", false, true, this.itensDialog));
     this.itensMenu.push(new ItemMenu("File Upload", false, true, null));
     this.itensMenu.push(new ItemMenu("Button", false, true, null, 'teste'));
