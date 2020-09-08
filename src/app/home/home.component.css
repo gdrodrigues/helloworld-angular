@@ -61,3 +61,7 @@ hr{
   top: 110px;
   border-color: #dbc27d;
 }
+a {
+  font-family: Arial;
+  color: black;
+}
