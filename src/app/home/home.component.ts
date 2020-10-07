@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Renderer2} from '@angular/core';
 import {Componente} from "../componente";
 
 @Component({
@@ -9,11 +9,26 @@ import {Componente} from "../componente";
 export class HomeComponent implements OnInit {
 
   componentes: Array<Componente> = new Array<Componente>();
-
-  constructor() { }
+  condition = 0;
+  interval : number;
+  constructor() {}
 
   ngOnInit(): void {
     this.addComponentes();
+  }
+
+  myFunction(){
+    this.condition = 1;
+    this.interval = setTimeout(()=> {
+      this.condition = 2;
+    },3000)
+
+  }
+
+  stopTimout(){
+    // @ts-ignore
+    this.condition = 2;
+    clearInterval(this.interval);
   }
 
   addComponentes(){

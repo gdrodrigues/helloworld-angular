@@ -6,7 +6,7 @@
           <a href="assets/Documentos_Gabriel.zip" download>
           <button mat-button id="buttonDow">Download</button>
           </a>
-          <button mat-button id="buttonExp">Exemplo</button>
+          <button mat-button id="buttonExp" (click)="myFunction()">Excluir</button>
       </mat-card-header>
       <p class="conteudo">
         <mat-card-content id="content">
@@ -22,3 +22,9 @@
     <p class="espaco"></p>
   </div>
 </div>
+
+<div [ngClass]="{'': condition == 0, 'show': condition == 1, 'hidden': condition == 2}" id="snackbar">
+  Texto que aparecerá no snackbar
+  <button id="close" (click)="stopTimout()">Fechar</button>
+</div>
+
